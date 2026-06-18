@@ -1,33 +1,97 @@
-# AI Pilot 侧边助手
+# AI Pilot Sidebar
 
-一个 Manifest V3 Chrome 扩展，使用官方 `chrome.sidePanel` 实现固定右侧多 AI 助手。
+AI Pilot Sidebar is a lightweight Chrome extension that keeps multiple official AI websites in a fixed Chrome side panel.
 
-## 已实现
+It is designed for people who already use ChatGPT, Grok, Gemini, Doubao, Kimi and other AI tools in the browser, and want a clean way to switch between them without leaving the current page.
 
-- Chrome 官方 Side Panel。
-- 侧边栏 AI 菜单：ChatGPT、Grok、Gemini、豆包、Kimi、Claude、DeepSeek、Copilot。
-- 内置中文 / 英文界面文案，跟随 Chrome 浏览器语言自动切换。
-- 菜单底部提供设置入口。
-- 设置默认启动 AI、记住上次使用、显示/隐藏 AI、调整排序。
-- 添加自定义 AI，支持侧栏嵌入、新标签页、独立窗口。
-- 自定义 AI 和图标图片 URL 仅支持 HTTPS。
-- AI 网页不能嵌入时，提供复制 Prompt 和打开官网的备用路径。
-- “高级嵌入兼容模式”：针对部分 AI 官网尝试移除阻止 iframe 的响应头，默认开启，可在设置中关闭。
+中文简介：AI Pilot Sidebar 是一个固定在 Chrome 右侧的轻量多 AI 侧边栏工具，支持 ChatGPT、Grok、Gemini、豆包、Kimi、Claude、DeepSeek、Copilot 和自定义 AI。
 
-## 使用方式
+## Highlights
 
-1. 打开 Chrome 的 `chrome://extensions/`。
-2. 开启“开发者模式”。
-3. 点击“加载已解压的扩展程序”。
-4. 选择本目录：`E:\项目\浏览器扩展ai`。
-5. 将扩展图标钉在工具栏，点击图标打开侧边栏。
+- Official Chrome Side Panel, not a floating web overlay.
+- Switch between multiple AI websites from a compact side menu.
+- Use your own official AI accounts and browser login state.
+- Set a default AI or remember the last used AI.
+- Show, hide and reorder built-in AI entries.
+- Add custom AI websites with name, URL, icon text and optional icon URL.
+- Chinese and English UI, following the browser language.
+- Local-first settings with `chrome.storage.local`.
+- Fallback actions when a website cannot be embedded reliably.
 
-## 注意
+## Supported AI Websites
 
-部分 AI 官网会通过浏览器安全策略阻止 iframe 嵌入。AI Pilot 不会接管登录或保存第三方账号密码，遇到无法嵌入的网站时会显示备用操作。
+- ChatGPT
+- xAI Grok
+- Google Gemini
+- Doubao
+- Kimi
+- Claude
+- DeepSeek
+- Microsoft Copilot
+- Custom AI websites
 
-“高级嵌入兼容模式”默认开启。它会使用 `declarativeNetRequestWithHostAccess` 针对常见 AI 域名尝试移除 `X-Frame-Options` 和 `Content-Security-Policy` 响应头。它可以改善部分白屏问题，但不保证所有登录流程和站点都可嵌入。
+## Privacy
 
-登录状态依赖 Chrome 当前用户资料中的官方网页登录 Cookie。也就是说，如果你已经在同一个 Chrome 浏览器里登录过 Grok、ChatGPT、豆包、Kimi 等官网，侧边栏加载同一官网时通常会自动复用登录状态。
+AI Pilot Sidebar does not operate an AI proxy and does not collect conversations, passwords or browsing history.
 
-扩展不收集、不上传用户的浏览记录、网页内容、账号密码或第三方 AI 对话内容。设置和自定义 AI 列表保存在本机 `chrome.storage.local` 中。
+The extension opens the official AI websites directly. Login state, cookies, conversations and account data are handled by the corresponding third-party AI websites.
+
+Settings such as AI list, default AI, visibility and custom AI entries are stored locally in Chrome.
+
+See [PRIVACY.md](./PRIVACY.md) for details.
+
+## Permissions
+
+AI Pilot Sidebar requests only the permissions needed for its core behavior:
+
+- `sidePanel`: opens the extension in Chrome's official side panel.
+- `storage`: saves local user preferences.
+- `tabs`: opens official AI websites in a new tab or popup when needed.
+- `declarativeNetRequestWithHostAccess`: optional compatibility mode for reducing iframe blank-page issues on selected AI websites.
+- Host permissions for supported AI websites: allow those official websites to load inside the side panel and apply compatibility handling when enabled.
+
+## Install Locally
+
+1. Open `chrome://extensions/` in Chrome.
+2. Enable Developer mode.
+3. Click "Load unpacked".
+4. Select this project folder.
+5. Pin the extension icon and click it to open the side panel.
+
+## Development Notes
+
+This is a Manifest V3 extension. There is no build step at the moment.
+
+Main files:
+
+- `manifest.json`: extension manifest and permissions.
+- `sidepanel.html`: side panel shell.
+- `src/sidepanel.js`: AI list, settings and side panel behavior.
+- `src/background.js`: Side Panel setup and compatibility rules.
+- `src/ai-frame-cleaner.js`: optional compatibility helper for selected AI sites.
+- `_locales/`: Chinese and English UI strings.
+- `assets/icons/`: extension and AI icons.
+
+## Chrome Web Store Positioning
+
+Suggested listing title:
+
+```text
+AI Pilot Sidebar: ChatGPT, Grok & Gemini
+```
+
+Short description:
+
+```text
+A lightweight Chrome side panel for ChatGPT, Grok, Gemini, Doubao, Kimi and more.
+```
+
+Core positioning:
+
+```text
+Use your own official AI accounts in a fixed Chrome side panel. No AI proxy, no conversation collection, no account password storage.
+```
+
+## License
+
+No open-source license has been selected yet. All rights reserved unless a license is added later.
