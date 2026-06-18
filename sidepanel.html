@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Pilot Sidebar</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="app-header">
+        <button class="menu-fab" id="menuButton" type="button" title="打开 AI 菜单" aria-label="打开 AI 菜单" data-i18n-title="openAiMenu" data-i18n-aria-label="openAiMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="model-pill" id="modelPill" type="button" title="切换 AI 模型" data-i18n-title="switchAiModel">
+          <span class="model-dot"></span>
+          <span id="modelPillName">ChatGPT</span>
+        </button>
+      </div>
+
+      <aside class="ai-rail" id="aiRail" aria-label="AI 菜单" data-i18n-aria-label="aiMenu">
+        <div class="brand">
+          <div class="brand-mark"><img src="assets/icons/ai-pilot.svg" alt=""></div>
+          <div class="brand-copy">
+            <strong>AI Pilot</strong>
+            <span data-i18n="sideAssistant">侧边助手</span>
+          </div>
+        </div>
+
+        <button class="rail-toggle" id="railToggle" type="button" title="折叠菜单" aria-label="折叠菜单" data-i18n-title="collapseMenu" data-i18n-aria-label="collapseMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="ai-list" id="aiList"></nav>
+
+        <div class="rail-actions">
+          <button class="rail-action-button" id="settingsButton" type="button" title="设置" data-i18n-title="settings">
+            <span class="rail-action-icon">⚙</span>
+            <span data-i18n="settings">设置</span>
+          </button>
+        </div>
+      </aside>
+      <button class="drawer-scrim" id="drawerScrim" type="button" aria-label="关闭 AI 菜单" data-i18n-aria-label="closeAiMenu" hidden></button>
+
+      <main class="workspace">
+        <p class="ai-hint" id="aiHint" hidden></p>
+
+        <section class="viewer" id="viewer">
+          <iframe id="aiFrame" title="AI 网页" data-i18n-title="aiWebPage" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="fallback" id="fallback" hidden>
+            <h2 id="fallbackTitle" data-i18n="fallbackDefaultTitle">无法在侧边栏中嵌入此 AI</h2>
+            <p id="fallbackText" data-i18n="fallbackDefaultText">部分 AI 官网会阻止 iframe 嵌入。你仍然可以复制 Prompt，或在官方网页中继续。</p>
+            <textarea id="promptPreview" readonly></textarea>
+            <div class="fallback-actions">
+              <button class="primary-button" id="fallbackCopyButton" type="button" data-i18n="copyPrompt">复制 Prompt</button>
+              <button class="secondary-button" id="fallbackOpenButton" type="button" data-i18n="openOfficialSite">打开官网</button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <section class="settings-panel" id="settingsPanel" aria-label="设置" data-i18n-aria-label="settings" hidden>
+        <div class="settings-header">
+          <div class="settings-title">
+            <div class="settings-mark"><img src="assets/icons/ai-pilot.svg" alt=""></div>
+            <div>
+              <h2 data-i18n="settings">设置</h2>
+              <span>AI Pilot</span>
+            </div>
+          </div>
+          <button class="icon-button" id="closeSettingsButton" type="button" title="关闭" data-i18n-title="close">×</button>
+        </div>
+
+        <div class="settings-body">
+          <section class="settings-card">
+            <div class="section-heading">
+              <h3 data-i18n="startupPreferences">启动偏好</h3>
+            </div>
+            <label class="field">
+              <span data-i18n="defaultStartupAi">默认启动 AI</span>
+              <select id="defaultAiSelect"></select>
+            </label>
+            <label class="switch-row">
+              <span>
+                <strong data-i18n="rememberLastUsed">记住上次使用</strong>
+                <em data-i18n="rememberLastUsedHint">开启后优先恢复最后一次选择的 AI。</em>
+              </span>
+              <input id="rememberLastCheckbox" type="checkbox">
+            </label>
+          </section>
+
+          <section class="settings-card">
+            <div class="section-heading">
+              <h3 data-i18n="aiList">AI 列表</h3>
+            </div>
+            <div class="manage-list" id="manageList"></div>
+          </section>
+
+          <form class="settings-card custom-form" id="customAiForm">
+            <div class="section-heading">
+              <h3 data-i18n="addCustomAi">添加自定义 AI</h3>
+            </div>
+            <div class="form-grid">
+              <label class="field">
+                <span data-i18n="name">名称</span>
+                <input id="customAiName" type="text" placeholder="例如：我的 AI" data-i18n-placeholder="namePlaceholder">
+              </label>
+              <label class="field">
+                <span data-i18n="iconText">图标文字</span>
+                <input id="customAiIcon" type="text" maxlength="4" placeholder="AI">
+              </label>
+            </div>
+            <label class="field">
+              <span data-i18n="url">网址</span>
+              <input id="customAiUrl" type="url" placeholder="https://example.com">
+            </label>
+            <label class="field">
+              <span data-i18n="iconImageUrl">图标图片 URL</span>
+              <input id="customAiIconUrl" type="url" placeholder="https://example.com/icon.png">
+            </label>
+            <label class="field">
+              <span data-i18n="openMode">打开方式</span>
+              <select id="customAiOpenMode">
+                <option value="iframe" data-i18n="openModeIframe">侧栏嵌入</option>
+                <option value="tab" data-i18n="openModeTab">新标签页</option>
+                <option value="window" data-i18n="openModeWindow">独立窗口</option>
+              </select>
+            </label>
+            <button class="primary-button" type="submit" data-i18n="addAi">添加 AI</button>
+          </form>
+
+          <section class="settings-card compact-card">
+            <label class="switch-row">
+              <span>
+                <strong data-i18n="advancedEmbeddingCompat">高级嵌入兼容</strong>
+                <em data-i18n="advancedEmbeddingCompatHint">尝试处理部分 AI 官网白屏或 iframe 限制。</em>
+              </span>
+              <input id="embeddingCompatCheckbox" type="checkbox">
+            </label>
+          </section>
+        </div>
+
+      </section>
+
+      <div class="toast" id="toast" role="status" hidden></div>
+    </div>
+
+    <script type="module" src="src/sidepanel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+{
+  "appName": {
+    "message": "AI Pilot Sidebar"
+  },
+  "appDescription": {
+    "message": "固定在 Chrome 右侧的多 AI 助手，支持 AI 切换和自定义 AI。"
+  },
+  "commandToggleSidePanel": {
+    "message": "打开 AI Pilot 侧边助手"
+  },
+  "sideAssistant": {
+    "message": "多 AI 侧边助手"
+  },
+  "openAiMenu": {
+    "message": "打开 AI 菜单"
+  },
+  "switchAiModel": {
+    "message": "切换 AI 模型"
+  },
+  "aiMenu": {
+    "message": "AI 菜单"
+  },
+  "collapseMenu": {
+    "message": "折叠菜单"
+  },
+  "closeAiMenu": {
+    "message": "关闭 AI 菜单"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "close": {
+    "message": "关闭"
+  },
+  "aiWebPage": {
+    "message": "AI 网页"
+  },
+  "fallbackDefaultTitle": {
+    "message": "无法在侧边栏中嵌入此 AI"
+  },
+  "fallbackDefaultText": {
+    "message": "部分 AI 官网会阻止 iframe 嵌入。你仍然可以复制 Prompt，或在官方网页中继续。"
+  },
+  "copyPrompt": {
+    "message": "复制 Prompt"
+  },
+  "openOfficialSite": {
+    "message": "打开官网"
+  },
+  "startupPreferences": {
+    "message": "启动偏好"
+  },
+  "defaultStartupAi": {
+    "message": "默认启动 AI"
+  },
+  "rememberLastUsed": {
+    "message": "记住上次使用"
+  },
+  "rememberLastUsedHint": {
+    "message": "开启后优先恢复最后一次选择的 AI。"
+  },
+  "aiList": {
+    "message": "AI 列表"
+  },
+  "addCustomAi": {
+    "message": "添加自定义 AI"
+  },
+  "name": {
+    "message": "名称"
+  },
+  "namePlaceholder": {
+    "message": "例如：我的 AI"
+  },
+  "iconText": {
+    "message": "图标文字"
+  },
+  "url": {
+    "message": "网址"
+  },
+  "iconImageUrl": {
+    "message": "图标图片 URL"
+  },
+  "openMode": {
+    "message": "打开方式"
+  },
+  "openModeIframe": {
+    "message": "侧栏嵌入"
+  },
+  "openModeTab": {
+    "message": "新标签页"
+  },
+  "openModeWindow": {
+    "message": "独立窗口"
+  },
+  "addAi": {
+    "message": "添加 AI"
+  },
+  "advancedEmbeddingCompat": {
+    "message": "高级嵌入兼容"
+  },
+  "advancedEmbeddingCompatHint": {
+    "message": "尝试处理部分 AI 官网白屏或 iframe 限制。"
+  },
+  "grokLoginHint": {
+    "message": "首次使用 Grok 请在侧边栏或官网完成 X 登录。"
+  },
+  "cookieLoginHint": {
+    "message": "如果 Cookie 弹窗或登录状态反复出现，请先在官网标签页完成一次登录和 Cookie 设置。"
+  },
+  "officialSiteFallbackTitle": {
+    "message": "$AI_NAME$ 将在官网打开",
+    "placeholders": {
+      "ai_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "officialSiteFallbackText": {
+    "message": "这个服务不适合稳定嵌入侧边栏。请在官方网页中继续使用。"
+  },
+  "fallbackTitle": {
+    "message": "$AI_NAME$ 可能无法在侧边栏中嵌入",
+    "placeholders": {
+      "ai_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "fallbackText": {
+    "message": "如果页面空白或登录失败，请复制 Prompt，或在官方网页中继续。"
+  },
+  "defaultAiUpdated": {
+    "message": "默认 AI 已更新"
+  },
+  "rememberLastEnabled": {
+    "message": "已开启记住上次使用"
+  },
+  "rememberLastDisabled": {
+    "message": "已关闭记住上次使用"
+  },
+  "embeddingCompatUpdated": {
+    "message": "高级嵌入兼容模式已更新"
+  },
+  "embeddingCompatUpdateFailed": {
+    "message": "高级嵌入兼容模式更新失败"
+  },
+  "show": {
+    "message": "显示"
+  },
+  "hide": {
+    "message": "隐藏"
+  },
+  "delete": {
+    "message": "删除"
+  },
+  "keepOneVisibleAi": {
+    "message": "至少保留一个可见 AI"
+  },
+  "customAiAdded": {
+    "message": "自定义 AI 已添加"
+  },
+  "fillNameAndUrl": {
+    "message": "请填写名称和网址"
+  },
+  "fillHttpsUrl": {
+    "message": "请填写 HTTPS 网址"
+  },
+  "promptCopied": {
+    "message": "Prompt 已复制"
+  },
+  "promptCopyFailed": {
+    "message": "复制失败，请在备用页手动复制"
+  },
+  "promptPreviewEmpty": {
+    "message": "需要备用操作时，Prompt 会显示在这里。"
+  },
+  "metaIframe": {
+    "message": "侧栏嵌入"
+  },
+  "metaTab": {
+    "message": "新标签页"
+  },
+  "metaWindow": {
+    "message": "独立窗口"
+  },
+  "metaHidden": {
+    "message": "已隐藏"
+  },
+  "metaCustom": {
+    "message": "自定义"
+  },
+  "promptPageTitle": {
+    "message": "页面标题"
+  },
+  "promptPageUrl": {
+    "message": "页面地址"
+  },
+  "promptHeadings": {
+    "message": "页面标题结构"
+  },
+  "promptSummarizeSelection": {
+    "message": "请总结下面选中文字，提取重点、结论和后续行动："
+  },
+  "promptNoSelectionSummarize": {
+    "message": "当前没有检测到选中文字，请根据页面信息给出摘要。"
+  },
+  "promptTranslateSelection": {
+    "message": "请把下面内容翻译成简体中文，保留专有名词："
+  },
+  "promptNoSelection": {
+    "message": "当前没有检测到选中文字。"
+  },
+  "promptRewriteSelection": {
+    "message": "请改写下面内容，让表达更清晰、自然、专业："
+  },
+  "promptExplainSelection": {
+    "message": "请解释下面内容的含义、背景和重点："
+  },
+  "promptSummarizePage": {
+    "message": "请总结当前网页的核心内容、关键结论、重要细节和我需要注意的事项。"
+  }
+}

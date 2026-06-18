@@ -1,0 +1,222 @@
+{
+  "appName": {
+    "message": "AI Pilot Sidebar"
+  },
+  "appDescription": {
+    "message": "A fixed Chrome side panel for switching between multiple AI websites and custom AI tools."
+  },
+  "commandToggleSidePanel": {
+    "message": "Open AI Pilot Sidebar"
+  },
+  "sideAssistant": {
+    "message": "Multi-AI Side Panel"
+  },
+  "openAiMenu": {
+    "message": "Open AI menu"
+  },
+  "switchAiModel": {
+    "message": "Switch AI model"
+  },
+  "aiMenu": {
+    "message": "AI menu"
+  },
+  "collapseMenu": {
+    "message": "Collapse menu"
+  },
+  "closeAiMenu": {
+    "message": "Close AI menu"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "close": {
+    "message": "Close"
+  },
+  "aiWebPage": {
+    "message": "AI website"
+  },
+  "fallbackDefaultTitle": {
+    "message": "This AI cannot be embedded in the side panel"
+  },
+  "fallbackDefaultText": {
+    "message": "Some AI websites block iframe embedding. You can still copy the prompt or continue on the official website."
+  },
+  "copyPrompt": {
+    "message": "Copy Prompt"
+  },
+  "openOfficialSite": {
+    "message": "Open Website"
+  },
+  "startupPreferences": {
+    "message": "Startup"
+  },
+  "defaultStartupAi": {
+    "message": "Default AI"
+  },
+  "rememberLastUsed": {
+    "message": "Remember last used"
+  },
+  "rememberLastUsedHint": {
+    "message": "When enabled, the last selected AI opens first."
+  },
+  "aiList": {
+    "message": "AI List"
+  },
+  "addCustomAi": {
+    "message": "Add Custom AI"
+  },
+  "name": {
+    "message": "Name"
+  },
+  "namePlaceholder": {
+    "message": "Example: My AI"
+  },
+  "iconText": {
+    "message": "Icon text"
+  },
+  "url": {
+    "message": "URL"
+  },
+  "iconImageUrl": {
+    "message": "Icon image URL"
+  },
+  "openMode": {
+    "message": "Open mode"
+  },
+  "openModeIframe": {
+    "message": "Side panel"
+  },
+  "openModeTab": {
+    "message": "New tab"
+  },
+  "openModeWindow": {
+    "message": "Popup window"
+  },
+  "addAi": {
+    "message": "Add AI"
+  },
+  "advancedEmbeddingCompat": {
+    "message": "Embedding Compatibility"
+  },
+  "advancedEmbeddingCompatHint": {
+    "message": "Try to reduce blank pages or iframe restrictions on some AI websites."
+  },
+  "grokLoginHint": {
+    "message": "For first-time Grok use, finish X login in the side panel or on the official website."
+  },
+  "cookieLoginHint": {
+    "message": "If cookie prompts or login state keep reappearing, complete login and cookie settings once on the official website."
+  },
+  "officialSiteFallbackTitle": {
+    "message": "$AI_NAME$ will open on its official website",
+    "placeholders": {
+      "ai_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "officialSiteFallbackText": {
+    "message": "This service is not reliable when embedded in the side panel. Please continue on the official website."
+  },
+  "fallbackTitle": {
+    "message": "$AI_NAME$ may not be embeddable in the side panel",
+    "placeholders": {
+      "ai_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "fallbackText": {
+    "message": "If the page is blank or login fails, copy the prompt or continue on the official website."
+  },
+  "defaultAiUpdated": {
+    "message": "Default AI updated"
+  },
+  "rememberLastEnabled": {
+    "message": "Remember last used is on"
+  },
+  "rememberLastDisabled": {
+    "message": "Remember last used is off"
+  },
+  "embeddingCompatUpdated": {
+    "message": "Embedding compatibility updated"
+  },
+  "embeddingCompatUpdateFailed": {
+    "message": "Failed to update embedding compatibility"
+  },
+  "show": {
+    "message": "Show"
+  },
+  "hide": {
+    "message": "Hide"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "keepOneVisibleAi": {
+    "message": "Keep at least one AI visible"
+  },
+  "customAiAdded": {
+    "message": "Custom AI added"
+  },
+  "fillNameAndUrl": {
+    "message": "Enter a name and URL"
+  },
+  "fillHttpsUrl": {
+    "message": "Use HTTPS URLs only"
+  },
+  "promptCopied": {
+    "message": "Prompt copied"
+  },
+  "promptCopyFailed": {
+    "message": "Copy failed. Please copy it manually from the fallback page."
+  },
+  "promptPreviewEmpty": {
+    "message": "When fallback actions are needed, the prompt will appear here."
+  },
+  "metaIframe": {
+    "message": "Side panel"
+  },
+  "metaTab": {
+    "message": "New tab"
+  },
+  "metaWindow": {
+    "message": "Popup window"
+  },
+  "metaHidden": {
+    "message": "Hidden"
+  },
+  "metaCustom": {
+    "message": "Custom"
+  },
+  "promptPageTitle": {
+    "message": "Page title"
+  },
+  "promptPageUrl": {
+    "message": "Page URL"
+  },
+  "promptHeadings": {
+    "message": "Page heading structure"
+  },
+  "promptSummarizeSelection": {
+    "message": "Summarize the selected text below. Extract key points, conclusions, and next actions:"
+  },
+  "promptNoSelectionSummarize": {
+    "message": "No selected text was detected. Please summarize based on the page information."
+  },
+  "promptTranslateSelection": {
+    "message": "Translate the following content into English while preserving proper nouns:"
+  },
+  "promptNoSelection": {
+    "message": "No selected text was detected."
+  },
+  "promptRewriteSelection": {
+    "message": "Rewrite the following content to make it clearer, more natural, and professional:"
+  },
+  "promptExplainSelection": {
+    "message": "Explain the meaning, background, and key points of the following content:"
+  },
+  "promptSummarizePage": {
+    "message": "Summarize the current page, including core content, key conclusions, important details, and anything I should pay attention to."
+  }
+}
