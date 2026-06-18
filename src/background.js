@@ -57,12 +57,6 @@ async function openSidePanel(tab) {
 
   if (tab?.id) {
     await chrome.sidePanel.open({ tabId: tab.id });
-    return;
-  }
-
-  const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (activeTab?.windowId) {
-    await chrome.sidePanel.open({ windowId: activeTab.windowId });
   }
 }
 

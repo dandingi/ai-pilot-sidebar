@@ -47,10 +47,6 @@ AI Pilot Sidebar 是一个固定在 Chrome 右侧的多 AI 侧边栏工具。
 
 用于保存本地偏好设置，例如默认 AI、上次使用的 AI、显示/隐藏、排序和自定义 AI。
 
-`tabs`
-
-用于在侧边栏嵌入不稳定时，打开 AI 官网标签页或弹窗。
-
 `declarativeNetRequestWithHostAccess`
 
 仅用于可选的嵌入兼容模式，尝试减少部分 AI 官网因 iframe 响应头造成的白屏问题。不会用于收集浏览内容。
@@ -116,10 +112,6 @@ Used to open AI Pilot Sidebar in Chrome's official side panel.
 `storage`
 
 Used to save local preferences, including default AI, last used AI, visibility, order and custom AI entries.
-
-`tabs`
-
-Used to open an AI website in a normal browser tab or popup when side panel embedding is not reliable.
 
 `declarativeNetRequestWithHostAccess`
 

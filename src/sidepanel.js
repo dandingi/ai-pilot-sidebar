@@ -408,13 +408,6 @@ async function persistAiList() {
   }
 }
 
-async function getActivePageContext() {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab?.id) return {};
-
-  return { title: tab.title, url: tab.url };
-}
-
 function buildPrompt(action, context = {}) {
   const title = context.title || "";
   const url = context.url || "";
@@ -442,7 +435,7 @@ function buildPrompt(action, context = {}) {
 }
 
 async function copyCurrentPrompt() {
-  const prompt = currentPrompt || buildPrompt("summarize-page", await getActivePageContext());
+  const prompt = currentPrompt || buildPrompt("summarize-page");
   currentPrompt = prompt;
   updatePromptPreview();
 
