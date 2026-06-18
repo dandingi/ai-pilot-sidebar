@@ -57,11 +57,11 @@ AI 官网域名权限
 
 ### 建议截图
 
-1. 打开 ChatGPT 的侧边栏，并展示 AI 菜单。
-2. AI 菜单展示 ChatGPT、Grok、Gemini、豆包、Kimi。
-3. 设置页展示默认 AI 和显示/隐藏控制。
-4. 自定义 AI 添加表单。
-5. 英文界面截图，用于国际用户展示。
+已生成英文版截图：
+
+1. `docs/screenshots/01-ai-pilot-sidebar-main-en.png`
+2. `docs/screenshots/02-ai-pilot-sidebar-menu-en.png`
+3. `docs/screenshots/03-ai-pilot-sidebar-settings-en.png`
 
 ### 建议关键词
 
@@ -123,11 +123,11 @@ Used to load the supported official AI websites in the side panel and apply opti
 
 ## Suggested Screenshots
 
-1. Side panel showing ChatGPT with the AI menu open.
-2. AI menu showing ChatGPT, Grok, Gemini, Doubao and Kimi.
-3. Settings page showing default AI and AI visibility controls.
-4. Custom AI form.
-5. English UI screenshot for international listing support.
+Generated English screenshots:
+
+1. `docs/screenshots/01-ai-pilot-sidebar-main-en.png`
+2. `docs/screenshots/02-ai-pilot-sidebar-menu-en.png`
+3. `docs/screenshots/03-ai-pilot-sidebar-settings-en.png`
 
 ## Suggested Tags / Keywords
 
