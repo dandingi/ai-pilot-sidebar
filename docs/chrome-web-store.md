@@ -4,17 +4,17 @@
 
 ### 扩展名称
 
-AI Pilot Sidebar: ChatGPT, Grok & Gemini
+AI Pilot Sidebar
 
 ### 简短描述
 
-固定在 Chrome 侧边栏中的轻量多 AI 助手，支持 ChatGPT、Grok、Gemini、豆包、Kimi 等。
+固定在 Chrome 侧边栏中的轻量多 AI 切换工具。
 
 ### 详细描述
 
 AI Pilot Sidebar 是一个固定在 Chrome 右侧的多 AI 侧边栏工具。
 
-你可以在一个简洁的侧边菜单中快速切换 ChatGPT、Grok、Gemini、豆包、Kimi、Claude、DeepSeek、Copilot 和自定义 AI 网站。扩展会直接打开对应 AI 的官方网站，并复用你当前 Chrome 浏览器中的官网登录状态。
+你可以在一个简洁的侧边菜单中快速切换常用 AI 官网和自定义 AI 网站。扩展会直接打开对应 AI 的官方网站，并复用你当前 Chrome 浏览器中的官网登录状态。
 
 主要功能：
 
@@ -63,25 +63,27 @@ AI 官网域名权限
 2. `docs/screenshots/02-ai-pilot-sidebar-menu-en.png`
 3. `docs/screenshots/03-ai-pilot-sidebar-settings-en.png`
 
-### 建议关键词
+### 关键词建议
 
-AI 侧边栏、ChatGPT 侧边栏、Grok 侧边栏、Gemini 侧边栏、多 AI、Chrome 侧边栏、AI 助手、Kimi、豆包、Claude、DeepSeek、Copilot
+建议只使用少量通用且准确的关键词，避免连续堆叠 AI 品牌名：
+
+AI 侧边栏、多 AI、Chrome 侧边栏、AI 助手、效率工具
 
 ---
 
 ## Extension Name
 
-AI Pilot Sidebar: ChatGPT, Grok & Gemini
+AI Pilot Sidebar
 
 ## Short Description
 
-A lightweight Chrome side panel for ChatGPT, Grok, Gemini, Doubao, Kimi and more.
+A lightweight multi-AI switcher in the Chrome side panel.
 
 ## Detailed Description
 
 AI Pilot Sidebar gives you a clean, fixed Chrome side panel for switching between multiple official AI websites.
 
-Use ChatGPT, Grok, Gemini, Doubao, Kimi, Claude, DeepSeek, Copilot and custom AI websites from one compact side menu. The extension uses your existing browser login state from the official websites, so you can continue using your own accounts.
+Use your preferred AI websites and custom AI tools from one compact side menu. The extension opens official websites directly and uses your existing browser login state, so you can continue using your own accounts.
 
 Key features:
 
@@ -131,4 +133,6 @@ Generated English screenshots:
 
 ## Suggested Tags / Keywords
 
-AI sidebar, ChatGPT sidebar, Grok sidebar, Gemini sidebar, multi AI, side panel, AI assistant, Kimi, Doubao, Claude, DeepSeek, Copilot
+Use a small number of accurate keywords and avoid long lists of AI brand names:
+
+AI sidebar, multi AI, side panel, AI assistant, productivity

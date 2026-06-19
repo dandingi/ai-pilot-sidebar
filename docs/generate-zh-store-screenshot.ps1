@@ -69,7 +69,7 @@ Draw-Text $g "AI Pilot Sidebar" 206 65 12 "#7a8797" ([System.Drawing.FontStyle]:
 
 Draw-Text $g "AI Pilot Sidebar" 105 170 42 "#0f172a" ([System.Drawing.FontStyle]::Bold) 560 58
 Draw-Text $g "固定在 Chrome 右侧的轻量多 AI 侧边栏工具" 108 238 24 "#334155" ([System.Drawing.FontStyle]::Regular) 560 42
-Draw-Text $g "快速切换 ChatGPT、Grok、Gemini、豆包、Kimi 等官方 AI 网站，复用你当前浏览器中的登录状态。" 108 296 20 "#475569" ([System.Drawing.FontStyle]::Regular) 560 92
+Draw-Text $g "快速切换常用 AI 官网和自定义 AI 网站，复用你当前浏览器中的登录状态。" 108 296 20 "#475569" ([System.Drawing.FontStyle]::Regular) 560 92
 
 $features = @(
   "官方 Chrome Side Panel",
@@ -102,7 +102,11 @@ $params.Dispose()
 $g.Dispose()
 $bmp.Dispose()
 
-Copy-Item -LiteralPath $repoOut -Destination $desktopOut -Force
+try {
+  Copy-Item -LiteralPath $repoOut -Destination $desktopOut -Force
+} catch {
+  $desktopOut = ""
+}
 
 $check = [System.Drawing.Image]::FromFile($repoOut)
 [pscustomobject]@{

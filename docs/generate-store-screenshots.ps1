@@ -8,7 +8,7 @@ if (!(Test-Path $outDir)) {
 }
 
 function New-Canvas {
-  $bmp = [System.Drawing.Bitmap]::new(1280, 800)
+  $bmp = [System.Drawing.Bitmap]::new(1280, 800, [System.Drawing.Imaging.PixelFormat]::Format24bppRgb)
   $g = [System.Drawing.Graphics]::FromImage($bmp)
   $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
   $g.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::ClearTypeGridFit
@@ -118,8 +118,8 @@ function Draw-AiRail($g, $x, $y, $w, $h) {
   Draw-Icon $g ($x + 24) ($y + 54) 58
   Draw-Text $g "AI Pilot" ($x + 96) ($y + 62) 30 "#ffffff" ([System.Drawing.FontStyle]::Bold) 150 42
   Draw-Text $g "Multi-AI Side Panel" ($x + 98) ($y + 100) 13 "#f8fafc" 0 150 24
-  $names = @("ChatGPT", "Google Gemini", "xAI Grok", "Doubao", "Kimi", "Claude", "DeepSeek", "Microsoft Copilot")
-  $letters = @("C", "G", "X", "D", "K", "C", "D", "M")
+  $names = @("ChatGPT", "Writing AI", "Research AI", "Coding AI", "Custom AI")
+  $letters = @("C", "W", "R", "C", "+")
   for ($i = 0; $i -lt $names.Count; $i++) {
     $rowY = $y + 164 + ($i * 46)
     $active = $i -eq 0
@@ -155,7 +155,7 @@ function Draw-SettingsPanel($g, $x, $y, $w, $h) {
   $listY = $sectionY + 210
   Draw-Text $g "AI List" ($x + 20) $listY 15 "#0f172a" ([System.Drawing.FontStyle]::Bold) 140 28
   Draw-RoundRect $g ($x + 20) ($listY + 36) ($w - 40) 250 7 (Brush "#ffffff") (Pen "#eef2f5" 1)
-  $ais = @("ChatGPT", "Google Gemini", "xAI Grok", "Doubao")
+  $ais = @("ChatGPT", "Writing AI", "Research AI", "Custom AI")
   for ($i=0; $i -lt $ais.Count; $i++) {
     $rowY = $listY + 48 + ($i * 56)
     Draw-RoundRect $g ($x + 34) ($rowY + 8) 24 24 5 (Brush "#eef4f7")
@@ -179,7 +179,7 @@ Draw-WebPageMock $g 80 110 760 620
 Draw-PanelBase $g 845 92 336 610 "ChatGPT"
 Draw-ChatMock $g 845 92 336 610
 Draw-Text $g "AI Pilot Sidebar" 110 642 38 "#0f172a" ([System.Drawing.FontStyle]::Bold) 460 52
-Draw-Text $g "Use ChatGPT, Grok, Gemini, Doubao, Kimi and more in a fixed Chrome side panel." 112 694 20 "#475569" 0 680 58
+Draw-Text $g "Switch between your preferred AI websites in a fixed Chrome side panel." 112 694 20 "#475569" 0 680 58
 Save-Shot $c (Join-Path $outDir "01-ai-pilot-sidebar-main-en.png")
 
 $c = New-Canvas
